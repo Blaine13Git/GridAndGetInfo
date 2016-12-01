@@ -13,7 +13,7 @@ public class PerformanceData extends AppUiBaseDevice {
 	
 //	public String nativeFileName = "qb_native_memSize.txt";
 //	public String dalvikFileName = "qb_dalvik_memSize.txt";
-//	public String cpuFileName = "qb_cpuUseInfo.txt";
+	public String cpuFileName = "qb_cpuUseInfo.txt";
 
 	/*
 	 * app data
@@ -24,14 +24,16 @@ public class PerformanceData extends AppUiBaseDevice {
 				+ totalMemoryFileName;
 		final String activityInfo = "adb shell dumpsys activity | grep mFocusedActivity >> /sdcard/"
 				+ totalMemoryFileName;
+		
+		final String cpuInfo = "adb shell dumpsys cpuinfo " + appPackage + "| grep \"" + appPackage + ": \" >> /sdcard/"
+				+ cpuFileName;
 
 //		 final String activityInfo = "adb shell dumpsys activity| awk '/mFocusedActivity:/{print $4}'";
 //		final String nativeMeminfo = "adb shell dumpsys meminfo " + appPackage + " | grep 'Native Heap' >> /sdcard/"
 //				+ nativeFileName;
 //		final String dalvikMeminfo = "adb shell dumpsys meminfo " + appPackage + " | grep 'Dalvik Heap' >> /sdcard/"
 //				+ dalvikFileName;
-//		final String cpuInfo = "adb shell dumpsys cpuinfo " + appPackage + "| grep \"" + appPackage + ": \" >> /sdcard/"
-//				+ cpuFileName;
+
 //		final String cpuInfo = "adb shell top -d 0.1 -n 1 | awk '/" + appPackage + "$/ {print $3}' >> /sdcard/"
 //				+ cpuFileName;
                                                 
@@ -52,8 +54,12 @@ public class PerformanceData extends AppUiBaseDevice {
 //						ExecCmd.toExecCmd(nativeMeminfo); // bitmapMem
 //						ExecCmd.toExecCmd(dalvikMeminfo); // objectMem
 						
+						//获取内存
 						ExecCmd.toExecCmd(activityInfo); //activity
 						ExecCmd.toExecCmd(totalMeminfo); // totalMem
+						
+						//获取CPU
+						
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -95,9 +101,11 @@ public class PerformanceData extends AppUiBaseDevice {
 			 * 处理CPU文件的逻辑和处理Total Memory的逻辑不一样
 			 * 所以需要作出判断给出不同的处理。此处略if(){}
 			 */
-//			if(){
-//				
-//			}
+			if(sourceFileName.contains("cpu")){
+				
+			}else{
+				
+			}
 			//处理内存文件的逻辑
 			while ((line = bufferedReader.readLine()) != null) {
 				
