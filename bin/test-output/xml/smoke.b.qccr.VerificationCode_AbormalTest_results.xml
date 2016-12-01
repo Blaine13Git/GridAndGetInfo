@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="smokeTest"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="151.254">
+  <properties />
+  
+  
+            <testcase name="testInvalidCode" time="21.274" classname="smoke.b.qccr.VerificationCode_AbormalTest" />
+                <testcase name="testOtherStore" time="27.045" classname="smoke.b.qccr.VerificationCode_AbormalTest" />
+                <testcase name="testNoConfirm" time="27.960" classname="smoke.b.qccr.VerificationCode_AbormalTest" />
+                <testcase name="testCodeLess" time="20.649" classname="smoke.b.qccr.VerificationCode_AbormalTest" />
+                <testcase name="testUsedCode" time="27.497" classname="smoke.b.qccr.VerificationCode_AbormalTest" />
+                <testcase name="testAfterSale" time="26.829" classname="smoke.b.qccr.VerificationCode_AbormalTest" />
+      
+</testsuite>

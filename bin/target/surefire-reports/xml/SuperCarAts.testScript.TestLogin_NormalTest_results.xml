@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="smokeTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.258">
+  <properties />
+  
+  
+            <testcase name="testLogin" time="4.258" classname="SuperCarAts.testScript.TestLogin_NormalTest" />
+      
+</testsuite>

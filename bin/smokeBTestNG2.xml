@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="nomalTest" parallel="false">
+	<!-- 加入监听类 -->
+	<listeners>
+		<listener class-name="baseClass.MyTestngListener" />
+		<listener class-name="baseClass.RetryListener" />
+		<listener class-name="baseClass.TestListener" />
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<test name="smokeTest">
+		<classes>
+			<!-- 验证历史 全部--> 
+			<class name="smoke.b.qccr.VerificationRecordsAll_NormalTest" />
+			
+			<!-- 验证历史 本月--> 
+			<class name="smoke.b.qccr.VerificationRecordsMonth_NormalTest" />
+			
+			<!-- 验证历史 当天--> 
+			<class name="smoke.b.qccr.VerificationRecordsToday_NormalTest" />
+			
+		</classes>
+		<!-- <packages> <package name="qccr.b.somke" /> </packages> -->
+
+	</test>
+	<usedefaultlisteners name="false" />
+</suite>

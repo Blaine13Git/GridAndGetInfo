@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Performance Test]">
+  <parameter name="app" value="D:/Work/apks/BApp_2.apk"/>
+  <parameter name="appPackage" value="com.twl.qichechaoren_business"/>
+  <parameter name="appActivity" value=".usercommon.activity.SplashActivity"/>
+  <parameter name="device" value="eda6d8a9"/>
+  <parameter name="url" value="http://127.0.0.1:4723/wd/hub"/>
+  <listeners>
+    <listener class-name="baseClass.MyTestngListener"/>
+    <listener class-name="baseClass.RetryListener"/>
+    <listener class-name="baseClass.TestListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="performance test B(failed)">
+    <parameter name="app" value="D:/Work/apks/BApp_2.apk"/>
+    <parameter name="appPackage" value="com.twl.qichechaoren_business"/>
+    <parameter name="appActivity" value=".usercommon.activity.SplashActivity"/>
+    <parameter name="device" value="eda6d8a9"/>
+    <parameter name="url" value="http://127.0.0.1:4723/wd/hub"/>
+    <classes>
+      <class name="qccr.performance.b.PerformanceClientB">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initConnection"/>
+          <include name="b_performance"/>
+        </methods>
+      </class> <!-- qccr.performance.b.PerformanceClientB -->
+    </classes>
+  </test> <!-- performance test B(failed) -->
+</suite> <!-- Failed suite [Performance Test] -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="performance test B"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="31.634">
+  <properties />
+  
+  
+            <testcase name="b_performance" time="31.634" classname="qccr.performance.b.PerformanceClientB" />
+      
+</testsuite>

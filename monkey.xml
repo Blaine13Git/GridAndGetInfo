@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test" parallel="false">
+	<!-- 加入监听类 -->
+	<listeners>
+		<listener class-name="baseClass.MyTestngListener" />
+		<listener class-name="baseClass.RetryListener" />
+		<listener class-name="baseClass.TestListener" />
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<tests>
+		<test name="chediandian info">
+		    
+			<parameter name="device" value="NX505J" />
+			<parameter name="app" value="D:\\Work\\workspace\\GridAutoTest\\apps\\B1.6.0-debug.apk" />
+			<parameter name="appPackage" value="com.twl.qichechaoren_business" />
+			<parameter name="appActivity" value=".usercommon.activity.SplashActivity_" />
+			<parameter name="url" value="http://127.0.0.1:4723/wd/hub" />
+
+			<classes>
+				<class name="qccr.performance.b.MonkeyPerformance" />
+			</classes>
+			
+		</test>
+	</tests>
+	
+	<usedefaultlisteners name="false" />
+</suite>
+

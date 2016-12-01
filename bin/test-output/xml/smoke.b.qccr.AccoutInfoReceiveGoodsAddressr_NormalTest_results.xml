@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="smokeTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.369">
+  <properties />
+  
+  
+            <testcase name="testAddPage" time="6.369" classname="smoke.b.qccr.AccoutInfoReceiveGoodsAddressr_NormalTest" />
+      
+</testsuite>

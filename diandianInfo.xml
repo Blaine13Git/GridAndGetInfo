@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test" parallel="false">
+	<!-- 加入监听类 -->
+	<listeners>
+		<listener class-name="baseClass.MyTestngListener" />
+		<listener class-name="baseClass.RetryListener" />
+		<listener class-name="baseClass.TestListener" />
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<tests>
+		<test name="chediandian info">
+		    
+			<parameter name="device" value="NX505J" />
+			<parameter name="app" value="D:\\Work\\workspace\\GridAutoTest\\apps\\com.chediandian.customer_3.6.10_36100.apk" />
+			<parameter name="appPackage" value="com.chediandian.customer" />
+			<parameter name="appActivity" value=".main.InitActivity" />
+			<parameter name="url" value="http://127.0.0.1:4723/wd/hub" />
+
+			<classes>
+				<class name="diandian.storeInfo.ChediandianStore2" />
+			</classes>
+			
+		</test>
+	</tests>
+	
+	<usedefaultlisteners name="false" />
+</suite>
+

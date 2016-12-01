@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="smokeTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.086">
+  <properties />
+  
+  
+            <testcase name="testUseEstimate" time="9.086" classname="qccr.b.somke.UseEstimate_NormalTest" />
+      
+</testsuite>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Performance Test" parallel="false">
+	<!-- 加入监听类 -->
+	<listeners>
+		<listener class-name="baseClass.MyTestngListener" />
+		<listener class-name="baseClass.RetryListener" />
+		<listener class-name="baseClass.TestListener" />
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<tests>
+		<test name="performance test B">
+			<parameter name="device" value="NX505J" />
+			<parameter name="app" value="D:\\Work\\workspace\\GridAutoTest\\apps\\weixin6322android821.apk" />
+			<parameter name="appPackage" value="com.tencent.mm" />
+			<parameter name="appActivity" value=".ui.LauncherUI" />
+			<parameter name="url" value="http://127.0.0.1:4723/wd/hub" />
+
+			<classes>
+				<class name="qccr.performance.mm.PerformanceClientMM" />
+			</classes>
+			
+		</test>
+	</tests>
+	
+	<usedefaultlisteners name="false" />
+</suite>
+

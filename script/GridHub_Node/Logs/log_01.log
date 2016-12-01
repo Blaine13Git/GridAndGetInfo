@@ -1,0 +1,28 @@
+2016-06-30 11:32:42:665 - info: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+2016-06-30 11:32:42:667 - info: Appium REST http interface listener started on localhost:4567
+2016-06-30 11:32:42:671 - info: [debug] Non-default server args: {"udid":"NX505J","address":"localhost","port":4567,"bootstrapPort":5557,"sessionOverride":true,"log":"D:\\Work\\scripts\\bats\\GridHub_Node\\Logs\\log_01.log","nodeconfig":"D:\\Work\\scripts\\bats\\GridHub_Node\\Grid_Jsons\\nodeconfig_01.json"}
+2016-06-30 11:32:42:672 - info: Console LogLevel: debug
+2016-06-30 11:32:42:673 - info: File LogLevel: debug
+2016-06-30 11:32:42:677 - info: [debug] starting auto register thread for grid. Will try to register every 10000 ms.
+2016-06-30 11:32:52:786 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2016-06-30 11:32:54:851 - info: --> GET /wd/hub/status {}
+2016-06-30 11:32:54:854 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:32:54:859 - info: <-- GET /wd/hub/status 200 8.204 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:32:56:877 - info: --> GET /wd/hub/status {}
+2016-06-30 11:32:56:883 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:32:56:892 - info: <-- GET /wd/hub/status 200 14.115 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:32:58:892 - info: --> GET /wd/hub/status {}
+2016-06-30 11:32:58:896 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:32:58:902 - info: <-- GET /wd/hub/status 200 7.867 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:00:908 - info: --> GET /wd/hub/status {}
+2016-06-30 11:33:00:915 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:00:925 - info: <-- GET /wd/hub/status 200 13.302 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:02:924 - info: --> GET /wd/hub/status {}
+2016-06-30 11:33:02:935 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:02:944 - info: <-- GET /wd/hub/status 200 15.588 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:04:949 - info: --> GET /wd/hub/status {}
+2016-06-30 11:33:04:957 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:04:967 - info: <-- GET /wd/hub/status 200 14.657 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:07:278 - info: --> GET /wd/hub/status {}
+2016-06-30 11:33:07:288 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-06-30 11:33:07:309 - info: <-- GET /wd/hub/status 200 326.155 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}

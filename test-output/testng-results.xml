@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Performance Test" duration-ms="55291" started-at="2016-12-01T08:58:27Z" finished-at="2016-12-01T08:59:22Z">
+    <groups>
+    </groups>
+    <test name="performance test B" duration-ms="55291" started-at="2016-12-01T08:58:27Z" finished-at="2016-12-01T08:59:22Z">
+      <class name="qccr.performance.b.PerformanceClientB">
+        <test-method status="PASS" signature="initConnection(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:qccr.performance.b.PerformanceClientB@4c40b76e]" name="initConnection" is-config="true" duration-ms="16467" started-at="2016-12-01T16:58:27Z" finished-at="2016-12-01T16:58:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eda6d8a9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/Work/apks/BApp_2.apk]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[com.twl.qichechaoren_business]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[.usercommon.activity.SplashActivity]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://127.0.0.1:4723/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initConnection -->
+        <test-method status="PASS" signature="b_performance()[pri:0, instance:qccr.performance.b.PerformanceClientB@4c40b76e]" name="b_performance" duration-ms="31634" started-at="2016-12-01T16:58:43Z" finished-at="2016-12-01T16:59:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- b_performance -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:qccr.performance.b.PerformanceClientB@4c40b76e]" name="tearDown" is-config="true" duration-ms="7178" started-at="2016-12-01T16:59:15Z" finished-at="2016-12-01T16:59:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qccr.performance.b.PerformanceClientB -->
+    </test> <!-- performance test B -->
+  </suite> <!-- Performance Test -->
+</testng-results>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Grid Test" parallel="tests" thread-count="2">
+	<!-- 加入监听类 -->
+	<listeners>
+		<listener class-name="baseClass.MyTestngListener" />
+		<listener class-name="baseClass.RetryListener" />
+		<listener class-name="baseClass.TestListener" />
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<tests>
+		<test name="smokeTest">
+			<parameter name="device" value="NX505J" />
+			<parameter name="app" value="D:\\Work\\workspace\\GridAutoTest\\apps\\qccr_C_2.0.apk" />
+			<parameter name="appPackage" value="com.twl.qichechaoren" />
+			<parameter name="appActivity" value=".activity.SplashActivity" />
+			<parameter name="url" value="http://127.0.0.1:4567/wd/hub" />
+
+			<classes>
+				<class name="smoke.c.qccr.WebActivity_NormalTest" />
+			</classes>
+		</test>
+	</tests>
+	
+	<tests>
+		<test name="smokeTest2">
+			<parameter name="device" value="d2372d55" />
+			<parameter name="app" value="D:\\Work\\workspace\\GridAutoTest\\apps\\qccr_C_2.0.apk" />
+			<parameter name="appPackage" value="com.twl.qichechaoren" />
+			<parameter name="appActivity" value=".activity.SplashActivity" />
+			<parameter name="url" value="http://127.0.0.1:4568/wd/hub" />
+
+			<classes>
+				<class name="smoke.c.qccr.WebActivity_NormalTest" />
+			</classes>
+		</test>
+	</tests>
+	<usedefaultlisteners name="false" />
+</suite>
