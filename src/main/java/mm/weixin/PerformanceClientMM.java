@@ -1,4 +1,4 @@
-package qccr.performance.mm;
+package mm.weixin;
 
 import org.testng.annotations.Test;
 
