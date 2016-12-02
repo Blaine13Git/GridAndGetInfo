@@ -20,6 +20,7 @@ public class PerformanceClientB extends AppUiBaseDevice {
 		toClick(MainActivity_Purchase.BUY,0);//点击购买
 		toClick(MainActivity_Purchase.COMMIT,0);//确定购买数量等信息
 		toClick(MainActivity_Purchase.CONFIRM,0);//确认生成订单
+		swipe_for_height(50);
 		back();//返回
 		toClick("确认",0);//确认返回
 		
@@ -32,7 +33,7 @@ public class PerformanceClientB extends AppUiBaseDevice {
 		getEle(BottomBar.MY, 0).click(); // 点击底部导航栏的--我的
 		getEle(MainActivity_User.ORDER_ALL, 0).click(); // 点击--全部
 		back();//返回
-		
+		swipe_for_height(50);
 		//String pageSource = getDriver().getPageSource();
 		
 		try {
@@ -41,7 +42,5 @@ public class PerformanceClientB extends AppUiBaseDevice {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
-
 }

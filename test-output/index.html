@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Performance_Test">
-              <span class="suite-name border-passed">Performance Test</span>
+              <span class="suite-name border-failed">Performance Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Performance_Test" class="hide-methods passed suite-Performance_Test"> (hide)</a> <!-- hide-methods passed suite-Performance_Test -->
-                      <a href="#" panel-name="suite-Performance_Test" class="show-methods passed suite-Performance_Test"> (show)</a> <!-- show-methods passed suite-Performance_Test -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Performance_Test" class="hide-methods failed suite-Performance_Test"> (hide)</a> <!-- hide-methods failed suite-Performance_Test -->
+                      <a href="#" panel-name="suite-Performance_Test" class="show-methods failed suite-Performance_Test"> (show)</a> <!-- show-methods failed suite-Performance_Test -->
                     </span>
-                    <div class="method-list-content passed suite-Performance_Test">
+                    <div class="method-list-content failed suite-Performance_Test">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Performance_Test" title="qccr.performance.b.PerformanceClientB" hash-for-method="b_performance">b_performance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Performance_Test -->
+                    </div> <!-- method-list-content failed suite-Performance_Test -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Performance_Test" class="panel Performance_Test">
-          <div class="suite-Performance_Test-class-passed">
+          <div class="suite-Performance_Test-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">qccr.performance.b.PerformanceClientB</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -127,10 +127,32 @@
                   <a name="b_performance">
                   </a> <!-- b_performance -->
                   <span class="method-name">b_performance</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.33 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
+System info: host: &apos;TWL20160304004&apos;, ip: &apos;10.10.20.89&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=D:/Work/apks/BApp_2.apk, networkConnectionEnabled=true, setWebContentsDebuggingEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=7N2SQL151H030980, ignoreUnimportantViews=true, platform=LINUX, desired={app=D:/Work/apks/BApp_2.apk, setWebContentsDebuggingEnabled=true, noReset=true, newCommandTimeout=300, unicodeKeyboard=true, platformName=Android, deviceName=eda6d8a9, resetKeyboard=true, ignoreUnimportantViews=true}, newCommandTimeout=300, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]
+Session ID: 115b3fc3-e913-49a0-8751-3acf959a9a55
+*** Element info: {Using=-android uiautomator, value=new UiSelector().resourceId(&quot;com.twl.qichechaoren_business:id/bt_pay&quot;).instance(0)}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:324)
+	at baseClass.AppUiBaseDevice.getEle(AppUiBaseDevice.java:176)
+	at baseClass.AppUiBaseDevice.toClick(AppUiBaseDevice.java:316)
+	at qccr.performance.b.PerformanceClientB.b_performance(PerformanceClientB.java:20)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Performance_Test-class-passed -->
+          </div> <!-- suite-Performance_Test-class-failed -->
         </div> <!-- panel Performance_Test -->
         <div panel-name="test-xml-Performance_Test" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -199,12 +221,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'b_performance')
 data.setCell(0, 2, 'qccr.performance.b.PerformanceClientB')
-data.setCell(0, 3, 31634);
+data.setCell(0, 3, 22057);
 window.suiteTableData['Performance_Test']= { tableData: data, tableDiv: 'times-div-Performance_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Performance_Test">
               </div> <!-- times-div-Performance_Test -->
             </div> <!-- times-div -->
@@ -236,12 +258,14 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">b_performance</span>
-                <span class="method-start">16474 ms</span>
+                <span class="method-start">9610 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">48110 ms</span>
+                <span class="method-start">34742 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

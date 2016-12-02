@@ -10,10 +10,10 @@ public class PerformanceData extends AppUiBaseDevice {
 
 	public boolean flag = true;
 	public String totalMemoryFileName = "qb_total_memSize.txt";
+	public String cpuFileName = "qb_cpuUseInfo.txt";
 	
 //	public String nativeFileName = "qb_native_memSize.txt";
 //	public String dalvikFileName = "qb_dalvik_memSize.txt";
-	public String cpuFileName = "qb_cpuUseInfo.txt";
 
 	/*
 	 * app data
@@ -25,7 +25,11 @@ public class PerformanceData extends AppUiBaseDevice {
 		final String activityInfo = "adb shell dumpsys activity | grep mFocusedActivity >> /sdcard/"
 				+ totalMemoryFileName;
 		
-		final String cpuInfo = "adb shell dumpsys cpuinfo " + appPackage + "| grep \"" + appPackage + ": \" >> /sdcard/"
+//		final String cpuInfo = "adb shell dumpsys cpuinfo | grep \"" + appPackage + ":          \" >> /sdcard/"
+//				+ cpuFileName;
+		final String cpuInfo = "adb shell top -d 0.05 -n 1 | grep \"" + appPackage + "$\" >> /sdcard/"
+				+ cpuFileName;
+		final String activityInfo_cpu = "adb shell dumpsys activity | grep mFocusedActivity >> /sdcard/"
 				+ cpuFileName;
 
 //		 final String activityInfo = "adb shell dumpsys activity| awk '/mFocusedActivity:/{print $4}'";
@@ -53,13 +57,16 @@ public class PerformanceData extends AppUiBaseDevice {
 //						ExecCmd.toExecCmd(cpuInfo); // cpu信息
 //						ExecCmd.toExecCmd(nativeMeminfo); // bitmapMem
 //						ExecCmd.toExecCmd(dalvikMeminfo); // objectMem
-						
-						//获取内存
-						ExecCmd.toExecCmd(activityInfo); //activity
-						ExecCmd.toExecCmd(totalMeminfo); // totalMem
-						
-						//获取CPU
-						
+						synchronized(this){
+							//获取内存
+							ExecCmd.toExecCmd(activityInfo); //activity
+							ExecCmd.toExecCmd(totalMeminfo); // totalMem
+							
+							//获取CPU
+							ExecCmd.toExecCmd(activityInfo_cpu); //activity
+							ExecCmd.toExecCmd(cpuInfo); // cpu value
+						}
+
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -75,7 +82,6 @@ public class PerformanceData extends AppUiBaseDevice {
 	 * 生成CSV文件
 	 */
 	public void getCSVFile(String sourceFileName, String csvFileName) {
-
 		try {
 			// 终止获取文件的线程
 			flag = false;
@@ -92,38 +98,55 @@ public class PerformanceData extends AppUiBaseDevice {
 			BufferedReader bufferedReader = new BufferedReader(fileReader, 8184);// 缓冲区每次读取8M
 			String line = "";
 
-			String csvFilePath = "D:/Work/scripts/results/" + csvFileName;
+			String csvFilePath = "D:/Work/scripts/data/" + csvFileName;
 			CsvWriter wr = new CsvWriter(csvFilePath, ',', Charset.forName("GBK"));
+			
 			int line_num = 1;
 			String memory_velue = null;
+			String cpu_value = null;
 			String activity = null;
+			
 			/*
 			 * 处理CPU文件的逻辑和处理Total Memory的逻辑不一样
 			 * 所以需要作出判断给出不同的处理。此处略if(){}
 			 */
 			if(sourceFileName.contains("cpu")){
-				
+				//处理CPU文件
+				while((line = bufferedReader.readLine()) != null){
+					if(line_num % 2 == 0){
+						line = line.trim();
+						cpu_value = line.split("\\s+")[2]; //使用空格进行分割
+					}else{
+						line = line.trim();
+//						activity = line.substring(line.lastIndexOf(".")+1,line.lastIndexOf(" "));
+						activity = line.substring(line.lastIndexOf("/")+1,line.lastIndexOf(" "));
+					}
+					
+					if(line_num % 2 == 0 && line_num >=2){
+						String[]  activity_cpu = {activity,cpu_value};
+						wr.writeRecord(activity_cpu); // 把字符串数组写入csv文件
+					}
+					line_num++;
+				}
 			}else{
-				
-			}
-			//处理内存文件的逻辑
-			while ((line = bufferedReader.readLine()) != null) {
-				
-				if(line_num % 2 == 0){
-					line = line.trim();
-					memory_velue = line.split("\\s+")[1]; //使用空格进行分割
-				}else{
-//					activity = line.substring(line.lastIndexOf(".")+1,line.lastIndexOf(" "));
-					activity = line.substring(line.lastIndexOf("/")+1,line.lastIndexOf(" "));
+				//处理内存文件
+				while ((line = bufferedReader.readLine()) != null) {
+					if(line_num % 2 == 0){
+						line = line.trim();
+						memory_velue = line.split("\\s+")[1]; //使用空格进行分割
+					}else{
+						line = line.trim();
+//						activity = line.substring(line.lastIndexOf(".")+1,line.lastIndexOf(" "));
+						activity = line.substring(line.lastIndexOf("/")+1,line.lastIndexOf(" "));
+					}
+					
+					if(line_num % 2 == 0 && line_num >=2){
+						String[]  activity_mem = {activity,memory_velue};
+						wr.writeRecord(activity_mem); // 把字符串数组写入csv文件
+					}
+					line_num++;
 				}
-				
-				if(line_num % 2 == 0 && line_num >=2){
-					String[]  activity_mem = {activity,memory_velue};
-					wr.writeRecord(activity_mem); // 把字符串数组写入csv文件
-				}
-				line_num++;
 			}
-
 			wr.close();
 			fileReader.close();
 			bufferedReader.close();
@@ -131,5 +154,4 @@ public class PerformanceData extends AppUiBaseDevice {
 			e.printStackTrace();
 		}
 	}
-
 }

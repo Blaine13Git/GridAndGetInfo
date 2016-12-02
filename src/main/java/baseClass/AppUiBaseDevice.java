@@ -113,9 +113,10 @@ public class AppUiBaseDevice extends CarmanLocalBase {
 			e.printStackTrace();
 		}
 		performanceData.getCSVFile(performanceData.totalMemoryFileName,"totalMem.csv");
+		performanceData.getCSVFile(performanceData.cpuFileName,"cpuData.csv");
 //		performanceData.getCSVFile(performanceData.nativeFileName,"nativeMem.csv");
 //		performanceData.getCSVFile(performanceData.dalvikFileName,"dalvikMem.csv");
-//		 performanceData.getCSVFile(performanceData.cpuFileName,"cpuData.csv");
+
 	}
 
 	public static void setDriver(AndroidDriver<WebElement> driver) {

@@ -34,7 +34,7 @@ public class PerformanceTuHu extends AppUiBaseDevice{
 		toClick("我的", 0);
 		toClick("全部订单", 0);
 		back();
-		
+		swipe_for_height(50);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
