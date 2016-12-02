@@ -2,8 +2,6 @@ package qccr.performance.b;
 
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.javascript.host.TouchList;
-
 import baseClass.AppUiBaseDevice;
 import qccr.pageObject.b.BottomBar;
 import qccr.pageObject.b.MainActivity_Purchase;
