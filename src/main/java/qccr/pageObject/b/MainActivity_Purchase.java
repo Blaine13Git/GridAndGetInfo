@@ -1,4 +1,4 @@
-package pageObject.b;
+package qccr.pageObject.b;
 
 public class MainActivity_Purchase {
 	

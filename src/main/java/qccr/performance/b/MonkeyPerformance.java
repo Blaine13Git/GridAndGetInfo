@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import baseClass.AppUiBaseDevice;
 import baseClass.ExecCmd;
 import io.appium.java_client.android.AndroidKeyCode;
-import pageObject.b.BottomBar;
+import qccr.pageObject.b.BottomBar;
 
 public class MonkeyPerformance extends AppUiBaseDevice {
 	

@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 import com.gargoylesoftware.htmlunit.javascript.host.TouchList;
 
 import baseClass.AppUiBaseDevice;
-import pageObject.b.BottomBar;
-import pageObject.b.MainActivity_Purchase;
-import pageObject.b.MainActivity_User;
+import qccr.pageObject.b.BottomBar;
+import qccr.pageObject.b.MainActivity_Purchase;
+import qccr.pageObject.b.MainActivity_User;
 
 public class PerformanceClientB extends AppUiBaseDevice {
 	
