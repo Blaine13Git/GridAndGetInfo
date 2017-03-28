@@ -87,12 +87,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.qccr.test</groupId>
-			<artifactId>ats</artifactId>
-			<version>1.0.6</version>
-		</dependency>
-
-		<dependency>
 			<!-- <groupId>velocity</groupId> -->
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity</artifactId>
@@ -143,11 +137,6 @@
 			<version>2.48.2</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.qccr.commons</groupId>
-			<artifactId>knife</artifactId>
-			<version>1.0.1.rc4</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.json</groupId>
@@ -294,6 +283,4 @@
 		</dependency>
 
 	</dependencies>
-
-
 </project>
