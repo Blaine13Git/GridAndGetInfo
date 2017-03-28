@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Test" parallel="false">
+<suite name="Diandian_Test" parallel="false">
 	<!-- 加入监听类 -->
 	<listeners>
 		<listener class-name="baseClass.MyTestngListener" />
